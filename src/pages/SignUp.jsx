@@ -10,7 +10,7 @@ import {
 } from 'firebase/auth'
 import { setDoc, doc, serverTimestamp } from 'firebase/firestore'
 import { db } from '../firebase.config'
-
+import OAuth from '../components/OAuth'
 
 function SignUp() {
     const onSubmit = async (e) => {
@@ -115,7 +115,7 @@ function SignUp() {
                     </div>
                 </form>
 
-                {/* Google OAuth */}
+                <OAuth />
 
                 <Link to='/sign-in' className='registerLink'>
                     Sign In Instead
