@@ -9,6 +9,7 @@ import ForgotPassword from "./pages/ForgotPassword";
 import Profile from "./pages/Profile";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
+import Category from './pages/Category'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/offers" element={<Offers />} />
           {/* <Route path="/profile" element={<Profile />} /> */}
           {/* Authenticated and protected Route */}
+          <Route path='/category/:categoryName' element={<Category />} />
           <Route path='/profile' element={<PrivateRoute />}>
             <Route path='/profile' element={<Profile />} />
           </Route>
